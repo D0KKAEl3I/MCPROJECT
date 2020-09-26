@@ -1,0 +1,36 @@
+body {
+    margin: 0px;
+    overflow-y: scroll;
+} 
+
+body * {
+    display: inline-block;
+    border: blue 2px solid;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+}
+
+nav {
+    position: fixed;
+    top: 50%;
+    margin-top: -250px;
+    left: 50px; 
+    width: 150px;
+    height: 500px;
+}
+
+section{
+    position: relative;
+    left: 15%;
+    width: 70%; 
+    height: 80%;
+}
+
+article{
+    width: 90%;
+    height: 900px;
+}
+
