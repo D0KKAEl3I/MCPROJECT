@@ -72,7 +72,8 @@ header{
 .banner{
     position: relative;
     width: 100%;
-    height: 150px;
+    height: auto;
+    padding: 0px 0 60px 0;
     background: linear-gradient(180deg, #70D8FF 0%, #70A4FF 100%);
 }
 .banner h1{
@@ -88,8 +89,43 @@ header{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+#sectionNav{
+    background-color: #ececec;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
 
-
+#sectionNav ul{
+    position: relative;
+    width: 600px;
+    height: 55px;
+    display: flex;
+    justify-content: space-around;
+}
+#sectionNav li{
+    height: 100%;
+}
+#sectionNav p{
+    line-height: 2.7;
+}
+#arrow{
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 0px;
+    height:0px;
+    border-top:15px solid none;
+    border-left: 15px solid transparent;
+    border-right:15px solid transparent;
+    border-bottom:15px solid white ;
+}
+section{
+    background-color: white;
+    width: 100%;
+    height: 1000px;
+}
 
 footer{
     position: relative;
