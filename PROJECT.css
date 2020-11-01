@@ -50,6 +50,15 @@ header{
     background-color: white;
     width: 70px;
     height: 70px;
+    position: fixed;
+    top:-70px;
+    left: 1620px;
+    transition: 0.3s;
+    opacity: 0;
+    border-radius: 35px;
+    box-shadow: #2929299f 0 0 25px; 
+    background-image: url(/images/로고.png);
+    background-size: cover;
 }
 .banner{
     position: relative;
