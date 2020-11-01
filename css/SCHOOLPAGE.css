@@ -57,7 +57,7 @@ header{
     transition: 0.3s;
     opacity: 0;
     border-radius: 35px;
-    box-shadow: #2929299f 0 0 25px;  
+    box-shadow: #5252529f 0 0 25px;  
     text-align: center;
 }
 #sideNav img{
@@ -90,6 +90,8 @@ header{
     -webkit-text-fill-color: transparent;
 }
 #sectionNav{
+    position: relative;
+    top:124px;
     background-color: #ececec;
     width: 100%;
     height: auto;
@@ -111,8 +113,9 @@ header{
     line-height: 2.7;
 }
 #arrow{
-    left: 0;
-    top: 0;
+    /* 14, 47.5, 81  */
+    left: 81%; 
+    top: 40px;
     position: absolute;
     width: 0px;
     height:0px;
