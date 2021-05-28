@@ -1,6 +1,8 @@
 * {
   padding: 0;
   margin: 0;
+  --main-color: white;
+  --sub-color: orange;
 }
 
 a {
