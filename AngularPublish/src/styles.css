@@ -1,8 +1,10 @@
 * {
   padding: 0;
   margin: 0;
-  --main-color: white;
-  --sub-color: orange;
+  --main-color: #f60;
+  --sub-color: #ff8a00;
+  --background-color: #ffffff;
+  letter-spacing: -2px;
 }
 
 a {
