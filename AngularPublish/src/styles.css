@@ -7,7 +7,7 @@
   --sub-color: #ff8a00;
   --background-color: #ffffff;
   letter-spacing: -2px;
-  font-family: 'Noto Sans KR', sans-serif;
+  --font-family: 'Noto Sans KR', sans-serif;
 }
 
 a {
