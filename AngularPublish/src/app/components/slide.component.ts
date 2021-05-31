@@ -69,7 +69,7 @@ import { Component } from '@angular/core'
         .buttons>li>button>img{filter: invert(100%) sepia(11%) saturate(0%) hue-rotate(350deg) brightness(107%) contrast(100%);transition:inherit;transform:scale(0.7)}
         .buttons>li>button:hover>img{filter: invert(60%) sepia(94%) saturate(3874%) hue-rotate(355deg) brightness(95%) contrast(116%);}
         
-        .toggleCard{position:absolute;left:0;bottom:0;width:400px; overflow-x:hidden;}
+        .toggleCard{position:absolute;left:0;bottom:0;width:410px; overflow-x:hidden;}
         .toggleCard>div{display:flex;width:calc(200% - 40px);position:relative;left:0;transition:.4s}
         .card{width:360px;color:white;box-sizing:border-box;padding:48px 40px;}
         .card:nth-child(1){background-color:var(--main-color);order:1}
@@ -78,7 +78,7 @@ import { Component } from '@angular/core'
         .card>a>span{font-weight:lighter;}
         .toggleCard>div>button{width:50px;border:none;outline:none;cursor:pointer;order:2;font-weight:bolder;font-size:80px;color:white;position:relative;}
         .toggleCard>div>button>img{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(8deg) brightness(109%) contrast(103%);}
-        .toggled{transform:translate(calc(-50% + 24px));}
+        .toggled{transform:translate(calc(-50% + 25px));}
     `]
 })
 
