@@ -28,20 +28,7 @@ import { Component, OnInit } from '@angular/core';
                     </nav>
                 </div>
             </header>
-            <section>
-
-
-
-
-            </section>
-            <section class="section">
-
-
-
-
-            </section>
         </div>
-        s
     `,
     styles: [` 
     header{
@@ -52,13 +39,40 @@ import { Component, OnInit } from '@angular/core';
             height:80px;
             background-color: var(--main-color);
     }
+    .container{
+        width:100%;
+    }
+    .container>img{
+        position: relative;
+        top: 21px;
+        left: 40px;
+    }
+    .nav{
+        display: flex;
+        height:100%;
+        margin-left: 51.3%;
+        transform: translate(-50% , -50%);
+    }
+    .nav>ul{
+        height:100%;
+    }
     .nav>ul>li{
         font-weight:bold;
         font-style: var(--font-family);
         font-size : 18px;
         float:left;
+        line-height:80px;
+        margin-left : 90px;
+        height:100%;
     }
-    
+    .nav>ul>li:hover{
+        border-width:30px;
+        border-top: 3px solid orange;
+        
+    }
+    .nav>ul>li>a{
+        letter-spacing:-4px;
+    }
     ` ]
 })
 export class HeaderComponent {
