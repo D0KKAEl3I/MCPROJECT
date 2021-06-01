@@ -5,24 +5,27 @@ import { titles, menus } from '../objects/menu';
     selector: 'Footer',
     template: `
         <div class="container">
-            <div class="main">
+            <div class="main" [ngClass]="{hide: !showFooter}">
                 <div class="logo">
                     <img src="/assets/image/logo_white_text.png">
                 </div>
                 <nav>
-                    <ul>
-                        <li *ngFor="let title of navTitles">{{title}}</li>
-                    </ul>
-                    <ul>
-                        <li *ngFor="let menuArr of navMenus">
-                            <ul>
-                                <li *ngFor="let menu of menuArr">{{menu}}</li>
+                    <ul class="titles">
+                        <li *ngFor="let title of navTitles; let i = index">
+                            <a>{{title}}</a>
+                            <ul class="menus">
+                                <li *ngFor="let menuArr of navMenus[i]">
+                                    {{menuArr}}
+                                </li>
                             </ul>
                         </li>
                     </ul>
                 </nav>
+                <div class="familySite">
+                    
                 </div>
-                <button class="toggleButton"></button>
+            </div>
+            <button class="toggleButton" (click)="toggleFooter()"></button>
             <div class="copyright">COPYRIGHT &copy; KIM AN LEE</div>
         </div>
     `,
@@ -30,59 +33,38 @@ import { titles, menus } from '../objects/menu';
         .container{
             width:100%;
             position:relative;
-            padding:60px 80px;
-            box-sizing:border-box;
             background-color:#3c3c3c
         }
-        .main{
-            width:100%;
-            height:300px;
-            background-color:inherit;
-            overflow-y:hidden;
-            display:flex;
-            justify-content:space-between;
+        .main{width:100%;height: 418px;padding: 66px 88px;box-sizing:border-box;background-color:inherit;overflow-y:hidden;display:flex;justify-content:space-between;}
+        .main.hide{height:60px;padding:0;}
+        nav{width:600px;}
+        .titles{width:100%;display:flex;justify-content:space-around;font-weight:bold;font-size:16px;color:#d0d0d0;}
+        .titles>li>a{display:block;padding: 9px 0;}
+        .menus{
+            font-weight:bold;
+            font-size:14px;
+            color:#909090;
         }
-        .main>.logo{
-            
+        .menus>li{
+            padding: 7px 0;
         }
-        .main>nav{
-            width:600px;
-            text-align:center;
-        }
-        .toggleButton{
-            width:80px;
-            height:24px;
-            position:absolute;
-            top:0;
-            left:50%;
-            transform:translate(-50%,-100%);
-            background-color:inherit;
-            border:none;
-            outline:none;
-            border-radius:8px 8px 0 0;
-        }
-        .copyright{
-            --height:60px;
-            width:100%;
-            height:var(--height);
-            background-color:rgb(32,32,32);
-            text-align:center;
-            line-height:var(--height);
-            position:absolute;
-            bottom:0;
-            left:0;
-            right:0;
-            color:rgb(128,128,128);
-        }
+        .toggleButton{width:80px;height:24px;position:absolute;top:0;left:50%;transform:translate(-50%,-100%);background-color:inherit;border:none;outline:none;border-radius:8px 8px 0 0;}
+        .copyright{--height:60px;width:100%;height:var(--height);background-color:rgb(32,32,32);text-align:center;line-height:var(--height);position:absolute;bottom:0;left:0;right:0;color:rgb(128,128,128);}
     `]
 })
 export class FooterComponent implements OnInit {
     public navTitles: string[]
     public navMenus: string[][];
+    public showFooter: boolean;
     constructor() {
-        this.navTitles = titles
-        this.navMenus = menus
+        this.navTitles = titles;
+        this.navMenus = menus;
+        this.showFooter = true;
     }
+    public toggleFooter() {
+        this.showFooter = !this.showFooter;
+    }
+
 
     ngOnInit(): void { }
 }

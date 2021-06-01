@@ -4,12 +4,12 @@ import { Component } from '@angular/core'
     selector: 'Slide',
     template: `
     <div class="container">
-        <ul class="slides" [ngClass]="{moved:!slideMoved}">
+        <ul class="slides" [ngClass]="{moved:slideMoved}">
             <li class="slide" ></li>
             <li class="slide" ></li>
         </ul>
         <div class="controls">
-            <span>SCROLL</span><span>{{slideMoved? 1 : 2}} / 2</span>
+            <span>SCROLL</span><span>{{!slideMoved? 1 : 2}} / 2</span>
             <ul class="buttons">
                 <li><button (click)="changeSlide();"><img src="/assets/image/left-arrow.svg"></button></li>
                 <li>
